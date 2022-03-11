@@ -1,0 +1,33 @@
+---
+title: "STA100"
+author: "Marle Lamountry"
+date: "3/10/2022"
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r}
+library(here)
+library(readr)
+library(tidyverse)
+library(janitor)
+```
+```{r}
+getwd()
+```
+
+
+
+```{r}
+glimpse(cars)
+```
+```{r}
+data(package = .packages(all.available = TRUE))
+```
+```{r}
+glimpse(billboard)
+```

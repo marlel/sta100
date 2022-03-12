@@ -1,0 +1,55 @@
+---
+title: "Untitled"
+author: "Marle Lamountry"
+date: "3/11/2022"
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r}
+library(tidyverse)
+library(janitor)
+library(here)
+```
+```{r}
+install.packages("writexl")
+```
+```{r}
+library(writexl)
+```
+```{r}
+install.packages('xlsx')
+```
+
+```{r}
+getwd()
+```
+
+
+
+```{r}
+glimpse(health_data)
+```
+```{r}
+summary(health_data)
+```
+```{r}
+health_data<-clean_names(health_data)
+```
+
+```{r}
+health_data_clean<-health_data%>%
+  select(women_age_years,women_pulse_beats_per_min, women_syst_bp_mm_of_hg, women_cholesterol_mg_per_deciliter, women_body_mass_index_bmi_kg_per_m_2, men_age_years, men_pulse_bpm, men_syst_bp_mm_of_hg, men_cholesterol_mg_per_deciliter, men_body_mass_index_bmi_kg_per_m_2)
+```
+```{r}
+health_data_clean
+```
+
+
+
+
+
